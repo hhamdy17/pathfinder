@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { @apply font-sans antialiased bg-gray-50 text-gray-900; }
+}
+
+@layer components {
+  .card { @apply bg-white border border-gray-200 rounded-xl p-5; }
+  .btn-primary { @apply bg-brand-50 border border-brand-200 text-brand-900 hover:bg-brand-100 rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer; }
+  .btn-ghost  { @apply border border-gray-200 text-gray-600 hover:bg-gray-50 rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer bg-white; }
+  .pill { @apply inline-flex items-center text-[10px] font-semibold px-2 py-0.5 rounded tracking-wide; }
+  .pill-warn  { @apply bg-amber-light text-amber; }
+  .pill-ok    { @apply bg-teal-light text-teal; }
+  .pill-flag  { @apply bg-coral-light text-coral; }
+  .pill-new   { @apply bg-blue-50 text-blue-700; }
+  .skill-bar-track { @apply h-1.5 bg-gray-100 rounded-full overflow-hidden; }
+  .skill-bar-fill  { @apply h-full rounded-full bg-brand-500 transition-all duration-700; }
+}
